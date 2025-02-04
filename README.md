@@ -1,27 +1,73 @@
-# LoginPage
+# 🚀 Login e Cadastro - Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+Este é um projeto Angular que implementa uma página de login e cadastro com estrutura modularizada. Ele está preparado para consumir um back-end futuramente.  
 
-## Development server
+## 📌 Tecnologias Utilizadas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Angular
+- TypeScript
+- SCSS para estilização
+- Angular Services para integração com APIs futuras
 
-## Code scaffolding
+## 📂 Estrutura do Projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+src/
+│── app/
+│   ├── components/                # Componentes reutilizáveis
+│   │   ├── default-login-layout/  # Layout padrão para login
+│   │   ├── primary-input/         # Componente de input reutilizável
+│   ├── pages/
+│   │   ├── login/
+│   │   │   ├── login.component.html   # Template HTML
+│   │   │   ├── login.component.scss   # Estilos da página de login
+│   │   │   ├── login.component.ts     # Lógica do componente
+│   │   │   ├── login.component.spec.ts # Testes do componente
+│   │   │   ├── services/
+│   │   │   │   ├── login.service.ts   # Service para requisições HTTP
+│   │   │   │   ├── login.service.spec.ts # Testes do service
+│   │   │   ├── types/
+│   │   │   │   ├── login-response.type.ts # Interface para tipagem de resposta da API
+│   ├── app.component.html          # Template principal
+│   ├── app.component.scss          # Estilos globais
+│   ├── app.component.ts            # Componente raiz
+│   ├── app.config.ts               # Configuração global
+│   ├── app.routes.ts               # Rotas da aplicação
+```
 
-## Build
+## 📦 Instalação e Execução
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 1️⃣ Clonar o repositório
+```bash
+git clone https://github.com/immark007/login-page-frontEnd.git
+```
 
-## Running unit tests
+### 2️⃣ Instalar as dependências
+```bash
+cd login-page-FrontEnd
+npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 3️⃣ Rodar o servidor de desenvolvimento
+```bash
+ng serve
+```
 
-## Running end-to-end tests
+A aplicação estará disponível em: [http://localhost:4200](http://localhost:4200)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🛠 Funcionalidades
 
-## Further help
+✅ **Login:** Formulário de login com campos de e-mail e senha.  
+✅ **Cadastro:** Interface planejada para permitir o registro de novos usuários.  
+✅ **Serviço de Autenticação:** Um `login.service.ts` para futura comunicação com o back-end.  
+✅ **Tipagem forte com TypeScript:** Interfaces e types definidos no diretório `types/`.  
+✅ **Componentização:** Elementos reutilizáveis em `components/` para facilitar a manutenção.  
+✅ **Estilização modularizada:** Uso de SCSS para estilos específicos de cada página.  
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 🚀 Próximos Passos
+
+🔹 Integrar com um back-end para autenticação real.  
+🔹 Implementar proteção de rotas com Guards do Angular.  
+🔹 Criar uma página de dashboard após o login.  
+
+---
